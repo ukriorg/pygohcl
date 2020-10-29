@@ -31,14 +31,18 @@ pip install pygohcl
 
 ## Building locally
 
-Clone this repo into a sensible location on your machine.
+Clone the repo:
+
+```sh
+git clone https://github.com/danielholdsworth/pygohcl $HOME/pygohcl
+```
 
 You can use the following commands to build a wheel for your platform:
 ```sh
 pip install wheel
 python3 -m venv venv
 . venv/bin/activate
-cd /path/to/repo/pygohcl/
+cd $HOME/pygohcl
 run ./build-wheel.sh
 pip3 install pygohcl --no-index -f "./dist/"
 ```
