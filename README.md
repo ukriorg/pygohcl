@@ -34,7 +34,7 @@ pip install pygohcl
 Clone the repo:
 
 ```sh
-git clone https://github.com/danielholdsworth/pygohcl $HOME/pygohcl
+git clone https://github.com/ukriorg/pygohcl $HOME/pygohcl
 ```
 
 You can use the following commands to build a wheel for your platform:
