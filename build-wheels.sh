@@ -5,10 +5,10 @@ export HOME=/tmp
 python setup.py sdist
 # Wheels will be written to /tmp before being auditwheel-repaired
 cd /tmp
-pip install -r "${build_dir}/dev-requirements.txt"
-pip wheel --no-deps --wheel-dir /tmp "${build_dir}"/dist/*.tar.gz
+python -m pip install -r "${build_dir}/dev-requirements.txt"
+python -m pip wheel --no-deps --wheel-dir /tmp "${build_dir}"/dist/*.tar.gz
 ls ./*.whl | xargs -n1 --verbose auditwheel repair --wheel-dir "${build_dir}/dist"
 # Install packages and test
-pip install pygohcl --no-index -f "${build_dir}/dist"
+python -m pip install pygohcl --no-index -f "${build_dir}/dist"
 # Auditwheel-repaired wheels
 ls -al "${build_dir}/dist"
